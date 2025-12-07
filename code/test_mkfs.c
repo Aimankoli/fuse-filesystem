@@ -205,7 +205,7 @@ int get_avail_blkno() {
 	// Step 2: Traverse data block bitmap to find an available slot
 	for (int i = 0; i<MAX_DNUM; i++){
 
-		if (get_bitmap(data_bitmap, i == 0)){
+		if (get_bitmap(data_bitmap, i) == 0){
 			//FOUND AN AVAILABLE DATA BLOCK!!
 			// Step 3: Update data block bitmap and write to disk 
 
